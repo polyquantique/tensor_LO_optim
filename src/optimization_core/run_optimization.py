@@ -413,7 +413,7 @@ def run_trust_only(f_opt_init, jsa, seeds, bh_kwargs=None):
 
 
 # ---------------------------------------------------------------
-#          Penalty and norm relaxation/homotopy continuation runners 
+#          Penalty and norm relaxation/homotopy continuation runners
 # ---------------------------------------------------------------
 
 

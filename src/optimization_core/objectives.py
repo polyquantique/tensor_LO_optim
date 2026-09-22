@@ -50,9 +50,7 @@ def objective_func_dim_penalty_param(
     fnorm = jnp.linalg.norm(fcomp) ** 2
     penalty = lambda_penalty * (fnorm - 1) ** 2
 
-
     jsa_overlap = contract_nd(jsa, jnp.conj(fcomp))
-
 
     # We maximize (overlap - lambda * ||fcom||^2)  →  minimize negative
     return -(
@@ -102,7 +100,9 @@ def objective_penalty_norm_relaxation(f, jsa, lambda_penalty=1e6, p=2):
 
     # p-norm relaxation
     fnorm = jnp.sum(jnp.abs(fcomp) ** p) ** (1.0 / p)
-    penalty = lambda_penalty * (fnorm - 1.0) ** 2  # Squaring the constraint makes it smoothly differentiable
+    penalty = (
+        lambda_penalty * (fnorm - 1.0) ** 2
+    )  # Squaring the constraint makes it smoothly differentiable
 
     # Tensor contraction
     jsa_overlap = jsa
@@ -110,4 +110,3 @@ def objective_penalty_norm_relaxation(f, jsa, lambda_penalty=1e6, p=2):
         jsa_overlap = jnp.tensordot(jsa_overlap, jnp.conj(fcomp), axes=([0], [0]))
 
     return -(jnp.real(jsa_overlap) - penalty)
-

@@ -235,7 +235,9 @@ def optimizer_basinhop_constrained(
 
     return (optimal_mode, -1 * solution.fun, solution, solution.success * 1.0)
 
+
 # Homotopy continuation optimizers
+
 
 def optimizer_grad_desc_penalty_norm_ramp(
     initial_seed, jsa, lambda_penalty, p, max_iters=1e4
