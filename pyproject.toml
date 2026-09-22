@@ -1,0 +1,29 @@
+[project]
+name = "optimization_core"
+version = "0.1.1"
+description = "Optimization of local oscillators for photon number states"
+authors = [
+    { name = "Gisell Osorio" }
+]
+readme = "README.md"
+requires-python = ">=3.14"
+
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "jax",
+    "jaxopt",
+    "pandas",
+    "seaborn",
+    "tensorrsvd @ git+https://github.com/PaulVirally/TensorRSVD",
+]
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+# Tell setuptools to look for packages inside src/
+[tool.setuptools.packages.find]
+where = ["src"]
