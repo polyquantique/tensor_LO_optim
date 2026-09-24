@@ -1,6 +1,6 @@
 # tensor_LO_optim
 
-Code accompanying the paper **"A tensor framework for optimal local oscillators in the homodyne detection of multiphoton-number states"**
+Code accompanying the paper **"Optimal local oscillators for the homodyne detection of multiphoton states"**
 
 ## Overview
 
@@ -79,11 +79,12 @@ If you use this code, please cite the associated paper:
 
 ```bibtex
 @article{tensor_lo_optim,
-  title   = {A tensor framework for optimal local oscillators in the homodyne detection of multiphoton-number states},
-  author  = {TBD},
-  journal = {TBD},
-  year    = {TBD},
-  note    = {Manuscript in preparation}
+  title   = {Optimal local oscillators for the homodyne detection of multiphoton states},
+  author  = {Osorio, Gisell Lorena and Virally, Paul and  Molesky, Sean and  Quesada, Nicol{\'a}s},
+  year    = {2026},
+  doi     = {https://doi.org/10.48550/arXiv.2609.28133},
+  url     = {https://arxiv.org/abs/2609.28133},
+  publisher = {arXiv}
 }
 ```
 
